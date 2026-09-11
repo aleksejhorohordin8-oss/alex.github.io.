@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0; /* уборка внешних отступов*/
+    padding: 0; /* Уборка внутренних отступов */
+    box-sizing: border-box; /* Изменение способа подсчета ширины */
+}
+
+body {
+    font-family: "Inter", sans-serif; /* основной шрифт и предостережение */
+    font-weight: 400; /* толщина шрифта */
+    color: #fff; /* цвет текста */
+}
+
+a {
+    text-decoration: none; /* Уборка подчеркивания ссылок */
+}
+
+.wrapper {
+    background: linear-gradient(24deg, rgba(0,0,0,1) 0%, rgba(186,26,26,1) 100%);  /* градиент заднего фона */
+    min-height: 100vh;          /* на всю высоту экрана */
+    display: flex;             /* Создает гибкий контейнер в ктором адаптируются обьекты */
+    flex-direction: column;      /* все идет сверху вниз */
+    padding: 0 20px;             /* Боковые отступы для для узких экранов*/
+}
+
+/* Логотип сверху по центру */
+.header {
+    text-align: center;          /* Центрирует текст по горизонтали внутри блока */
+    padding: clamp(40px, 10vh, 100px) 20px;          /* Гибкий отступ*/
+}
+
+.logo {
+    font-size: clamp(22px, 5vh, 32px); ;                /* гибкий Размер текста */
+    font-weight: 600;                /* Полужирный текст */
+    display: inline-block;
+    line-height: 1.3;
+}
+
+/* Блок с кнопкой — занимает всё оставшееся место и центрирует кнопку */
+.center-block {
+    flex: 1;                    /* растягивается на всю оставшуюся высоту */
+    display: flex;              /* Центрирует текст по горизонтали внутри блока */
+    justify-content: center;    /* центр по горизонтали */
+    align-items: center;        /* центр по вертикали */
+    padding-bottom: 40px;
+}
+
+ul {
+    list-style: none;             /* Уберает маркеры (точки) по умолчанию */
+}
+
+.btn a {
+    display: inline-block;    /*Дает возможность изменять ширину высоту и т.д*/
+    padding: clamp(12px, 2vh, 14px) clamp(28px, 8vh, 40px);       /*Размеры*/
+    background: #fff;       /*Фон*/
+    color: #000;            /*Текст цвет */
+    border-radius: 8px;       /*Скругление углов*/
+    font-weight: 500;         /*Средняя жирность*/
+    font-size: clamp(14px, 4vh, 16px);
+    transition: 0.3s;         /*Плавный переход при наведении)*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);   /*Тень кнопки*/
+    text-align: center;
+    max-width: 100%;
+}
+
+.btn a:hover {                /*когда на элемент наведен курсор*/
+    background: #ba1a1a;    /*цвет фона*/
+    color: #ffffff;            /*цвет текста*/
+    box-shadow: 0 8px 24px rgba(186, 26, 26, 0.6);
+    transform: translateY(-2px);
+}
